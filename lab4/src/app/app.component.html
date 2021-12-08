@@ -1,0 +1,33 @@
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+  }
+</style>
+
+<br/>
+<br/>
+<br/>
+<input placeholder="a" type="number" [value]="n[0]" (keyup)="changeN($event,0)" />
+<input placeholder="b" type="number" [value]="n[1]" (keyup)="changeN($event,1)" />
+<input placeholder="c" type="number" [value]="n[2]" (keyup)="changeN($event,2)" />
+<br/>
+<br/>
+<br/>
+<app-child-component [glebber]="n"></app-child-component>
+
+
+
+
+<router-outlet></router-outlet>

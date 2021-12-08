@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>DoB</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </thead>
+  <tbody style="color: black">
+    <tr *ngFor="let element of users">
+      <td>{{element.name.first}}</td>
+      <td>{{element.name.last}}</td>
+      <td>{{element.dob.date}}</td>
+      <td>{{ element.dob.age }}</td>
+      <td>{{element.gender}}</td>
+    </tr>
+  </tbody>
+</table>

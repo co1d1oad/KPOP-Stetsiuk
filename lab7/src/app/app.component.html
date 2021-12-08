@@ -1,0 +1,38 @@
+
+<br/>
+<div style="border: 2px solid black; margin: 10px; padding: 10px">
+  Имя:<input type="text" [(ngModel)]="userData.name" />
+  <div *ngIf="!(nameErr === '')" id="nameErr">{{ nameErr }}</div>
+  <hr />
+  Телефон:<input type="text" [(ngModel)]="userData.phone" />
+  <div *ngIf="!(phoneErr === '')" id="phoneErr">{{ phoneErr }}</div>
+  <hr />
+  Email:<input type="text" [(ngModel)]="userData.email" />
+  <div *ngIf="!(emailErr === '')" id="emailErr">{{ emailErr }}</div>
+  <hr />
+  Address:<input type="text" [(ngModel)]="userData.login" />
+  <div *ngIf="!(loginErr === '')" id="loginErr">{{ loginErr }}</div>
+</div>
+<div style="border: 2px solid black; margin: 10px; padding: 10px">
+  Пол:<select type="select" name="sex" value="male" [(ngModel)]="userData.sex">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <div *ngIf="!(sexErr === '')" id="sexErr">{{ sexErr }}</div>
+  <hr />
+
+  Возраст:<input type="number" [(ngModel)]="userData.age" />
+  <div *ngIf="!(ageErr === '')" id="ageErr">{{ ageErr }}</div>
+  <hr />
+
+  Перечислите личные  качества:<input type="text" [(ngModel)]="userData.msgText" />
+
+</div>
+<div style="border: 2px solid black; margin: 10px; padding: 10px">
+    Выберите :<input type="radio" name="animal" value="male"  [(ngModel)]="userData.animal" >Капібар <input type="radio" name="animal" value="female"[(ngModel)]="userData.animal">Тапір
+    <input type="radio" name="animal" value="dunno"[(ngModel)]="userData.animal">Бородавочнік
+    <div *ngIf="!(animalErr==='')"  id="animalErr">{{animalErr}}</div>
+    <hr>
+</div>
+
+<input type="button" value="Отправить информацию" (click)="checkData()" />
